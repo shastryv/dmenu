@@ -1,6 +1,5 @@
-alpha-20210605-1a13d04
+numbers-20220512-28fb3e2
+instant-4.7
 fuzzyhighlight-4.9
 fuzzymatch-4.9
-instant-4.7
-numbers-20220512-28fb3e2
-xresources-4.9
+alpha-20210605-1a13d04
