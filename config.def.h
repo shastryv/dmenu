@@ -3,7 +3,7 @@
 
 static int topbar = 1;                      /* -b  option; if 0, dmenu appears at bottom */
 #if ALPHA_PATCH
-static int opacity = 1;                     /* -o  option; if 0, then alpha is disabled */
+static int opacity = 0.95;                     /* -o  option; if 0, then alpha is disabled */
 #endif // ALPHA_PATCH
 #if FUZZYMATCH_PATCH
 static int fuzzy = 1;                       /* -F  option; if 0, dmenu doesn't use fuzzy matching */
@@ -15,11 +15,11 @@ static int incremental = 0;                 /* -r  option; if 1, outputs text ea
 static int instant = 0;                     /* -n  option; if 1, selects matching item without the need to press enter */
 #endif // INSTANT_PATCH
 #if CENTER_PATCH
-static int center = 1;                      /* -c  option; if 0, dmenu won't be centered on the screen */
+static int center = 0;                      /* -c  option; if 0, dmenu won't be centered on the screen */
 static int min_width = 500;                 /* minimum width when centered */
 #endif // CENTER_PATCH
 #if BARPADDING_PATCH
-static const int vertpad = 10;              /* vertical padding of bar */
+static const int vertpad = 45;              /* vertical padding of bar */
 static const int sidepad = 10;              /* horizontal padding of bar */
 #endif // BARPADDING_PATCH
 #if RESTRICT_RETURN_PATCH
