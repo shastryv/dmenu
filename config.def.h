@@ -1,14 +1,14 @@
 /* See LICENSE file for copyright and license details. */
 /* Default settings; can be overriden by command line. */
 
-static int topbar = 1;                      /* -b  option; if 0, dmenu appears at bottom */
-static int opacity = 0.95;                     /* -o  option; if 0, then alpha is disabled */
+static int topbar = 0;                      /* -b  option; if 0, dmenu appears at bottom */
+static int opacity = 0.9;                     /* -o  option; if 0, then alpha is disabled */
 static int fuzzy = 1;                       /* -F  option; if 0, dmenu doesn't use fuzzy matching */
 static int incremental = 0;                 /* -r  option; if 1, outputs text each time a key is pressed */
-static int center = 0;                      /* -c  option; if 0, dmenu won't be centered on the screen */
-static int min_width = 500;                 /* minimum width when centered */
+static int center = 1;                      /* -c  option; if 0, dmenu won't be centered on the screen */
+static int min_width = 200;                 /* minimum width when centered */
 static const int vertpad = 45;              /* vertical padding of bar */
-static const int sidepad = 10;              /* horizontal padding of bar */
+static const int sidepad = 25;              /* horizontal padding of bar */
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static char *fonts[] =
 {
@@ -39,7 +39,7 @@ char *colors[][2] = {
 	[SchemeNorm] = { "#bbbbbb", "#222222" },
 	[SchemeSel]  = { "#eeeeee", "#005577" },
 	[SchemeOut]  = { "#000000", "#00ffff" },
-	[SchemeMid]  = { "#eeeeee", "#770000" },
+	[SchemeMid]  = { "#eeeeee", "#0d0e29" },
 	[SchemeSelHighlight]  = { "#ffc978", "#005577" },
 	[SchemeNormHighlight] = { "#ffc978", "#222222" },
 	[SchemeHover]  = { "#ffffff", "#353D4B" },
@@ -50,7 +50,7 @@ char *colors[][2] = {
 	[SchemePurple] = { "#ffffff", "#9952e0" },
 };
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
-static unsigned int lines      = 0;
+static unsigned int lines      = 5;
 
 /*
  * Characters not considered part of a word while deleting words
@@ -58,5 +58,3 @@ static unsigned int lines      = 0;
  */
 static const char startpipe[] = "#";
 static const char worddelimiters[] = " ";
-
-
